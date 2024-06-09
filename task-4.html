@@ -1,31 +1,30 @@
-const form = document.querySelector(".login-form");
+<!DOCTYPE html>
+<html lang="en">
 
-form.addEventListener("submit", event => {
-    event.preventDefault();
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 4</title>
+    <link rel="stylesheet" href="./css/common.css" />
+</head>
 
-    const email = form.elements.email.value.trim();
-    const password = form.elements.password.value.trim();
+<body>
+    <p><a href="./index.html">Go back</a></p>
 
-    if (!email || !password) {
-        alert('All form fields must be filled in');
-    }
-    else {
-        const formData = {
-            email,
-            password
-        };
+    <form class="login-form">
+        <label>
+            Email
+            <input type="email" name="email" />
+        </label>
+        <label>
+            Password
+            <input type="password" name="password" />
+        </label>
+        <button type="submit">Login</button>
+    </form>
 
-        console.log(formData);
-        form.reset();
-    }
-});
+    <script src="./js/task-4.js" type="module"></script>
+</body>
 
-//!!!!!!! Попрактикуватися із методом ForEach. 
-// const formData = {};
-// form.elements.forEach(input => {
-//     if (input.type !== 'button' && input.type !== 'submit') {
-//         formData[input.name] = input.value.trim();
-//     }
-// });
-// console.log(formData);
-// ```
+</html>
